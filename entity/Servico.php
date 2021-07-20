@@ -39,7 +39,7 @@
 	public function setDescricao( $descricao) {
 		$this->descricao = $descricao;
 	}
-
+/*
 	public usuario getId_u() {
 		return $this->id_u;
 	}
@@ -63,6 +63,6 @@
 	public void setNumero( $numero) {
 		$this->numero = $numero;
 	}
-
+*/
 
     }

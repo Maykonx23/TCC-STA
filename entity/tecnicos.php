@@ -20,7 +20,7 @@ class Tecnicos{
 	public function setDescricao($descricao) {
 		$this.$descricao = $descricao;
 	}
-
+/*
 	public Servico getId_s() {
 		return this.$id_s;
 	}
@@ -36,7 +36,7 @@ class Tecnicos{
 	public void setId_c(usuario $id_c) {
 		this->id_c = $id_c;
 	}
-
+*/
 
     
 

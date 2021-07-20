@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-use App\Models\usuario;
+use App\Models\Usuario;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
@@ -16,7 +16,7 @@ class UnitarioTest extends TestCase
      */
     public function testUsuarioContem()
     {
-        $user = new usuario(['Maykon', 'teste', '123']);
+        $user = new Usuario(['Maykon', 'teste', '123']);
         $this->assertTrue($user->contem('Maykon'));
         $this->assertFalse($user->contem('12345'));
     }
