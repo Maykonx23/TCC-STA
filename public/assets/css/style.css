@@ -1,0 +1,469 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Inicio Template */
+
+.bg_templates{
+    background-color: #D9EBE6;
+}
+
+.logo {
+    margin-top: 10px;
+    background-image: url('../icons/LOGO-Longa.png');
+    background-repeat: no-repeat;
+    height: 60px;
+    width: 500px;
+}
+
+nav {
+    background: linear-gradient(to top, #234EFA, #070DFA 55%, #234EFA);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 70px;
+    border-bottom: ridge #1400FA 3px;
+    opacity: 0.99;
+}
+
+nav li{
+    margin: 15px 0px 0px 30px;
+    font-size: 20px;
+}
+
+.nav-list {
+    color: white;
+    list-style: none;
+    display: flex;
+}
+
+.nav-list a{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-list a:hover{
+    color: #E6D557;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 1px;
+    background: #fff;
+    margin: 8px;
+    padding-right: 5px;
+    transition: 0.3s;
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/*Fim Template*/
+/* Inicio Login */
+
+.login{
+    background-color: #94D4D2;
+    margin: 250px 400px 0 400px;
+    height: 425px;
+    border-radius: 20px;
+    border-top: ridge #94D4D2 8px ;
+    border-left: ridge #94D4D2 8px ;
+    border-bottom: groove #94D4D2 8px ;
+    border-right: groove #94D4D2 8px ;
+}
+/*
+.container2{
+    height: 100vh;
+    border: solid blue 1px;
+}*/
+
+div h1{
+    text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+.bg_login{
+    background: linear-gradient(-180deg, #070DFA, #234EFA 50%, #070DFA);
+}
+
+.login h1{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form_login{
+    margin: 50px 0 0 0px;
+}
+
+.form_login input{
+    width: 250px;
+    margin-right: 10px;
+}
+
+.form_login button{
+    font-size: 15px;
+    font-weight: bold;
+    border: solid black 1px;
+    width: 60px;
+    padding: 1px;
+    margin-top: 35px;
+    margin-left: 235px;
+}
+
+.form_login button:hover{
+    color: blue;
+}
+
+#cpf{
+    font-weight: bold;
+    margin-left: 30px;
+    margin-bottom: 12px;
+}
+
+#senha{
+    font-weight: bold;
+    margin: 25px 0 12px 30px;
+}
+
+.icones{
+    height: 25px;
+    margin-right: 4px;
+}
+
+.linha{
+    margin: 30px 0 10px 12px;
+    width: 90%;
+    background-color: black;
+    text-align: center;
+    opacity: 0.3;
+    height: 1.1px;
+}
+
+.esqueceu{
+    font-weight: 700;
+    color: black;
+    margin-left: 3px;
+    font-size: 15px;
+}
+
+.cadastrar_se{
+    font-weight: 700;
+    color: black;
+    margin-left: 60px;
+    font-size: 15px;
+}
+
+.form a{
+    text-decoration: none;
+}
+
+.form a:hover{
+    color: rgb(4, 23, 58);
+}
+
+/* Fim Login */
+/* Inicio Cadastro */
+
+.bg_cadastro{
+    background: linear-gradient(-180deg, #070DFA, #234EFA 50%, #070DFA);
+}
+
+.cadastro_bg{
+    background-color: #94D4D2;
+    border-radius: 20px;
+    border-top: ridge #94D4D2 8px ;
+    border-left: ridge #94D4D2 8px ;
+    border-bottom: groove #94D4D2 8px ;
+    border-right: groove #94D4D2 8px ;
+    margin-top: 200px;
+    
+    opacity: 0.9;
+}
+
+.cadastro{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.cadastro_bg td{
+    display: inline;
+}
+
+div label{
+    margin-top: 15px;
+    margin-bottom: 3px;
+    font-weight: 700;
+}
+
+.nome input{
+    width: 270px;
+    height: 30px;
+    font-size: 13px;
+    padding-left: 5px;
+}
+
+.email input{
+    width: 270px;
+    height: 30px;
+    font-size: 13px;
+    padding-left: 5px;
+}
+
+.celular input{
+    width: 270px;
+    height: 30px;
+    font-size: 13px;
+    padding-left: 5px;
+}
+
+.telefone input{
+    width: 255px;
+    height: 30px;
+    font-size: 13px;
+    padding-left: 5px;
+}
+
+.cpf input{
+    width: 270px;
+    height: 30px;
+    font-size: 13px;
+    padding-left: 5px;
+}
+
+.data_nasc input{
+    width: 270px;
+    height: 30px;
+    font-size: 13px;
+    padding-left: 5px;
+}
+
+.senha input{
+    width: 270px;
+    height: 30px;
+    font-size: 13px;
+    padding-left: 5px;
+}
+
+.senha_conf input{
+    width: 255px;
+}
+
+.linha2{
+    margin: 30px 0 0 12px;
+    width: 98%;
+    background-color: black;
+    text-align: center;
+    opacity: 0.3;
+    height: 1.1px;
+}
+
+.dados{
+    margin-top: 35px;
+}
+
+.endereco{
+    margin-top: 40px;
+}
+
+.cep input{
+    width: 200px;
+    height: 30px;
+    font-size: 13px;
+    padding-left: 5px;
+}
+
+.uf input{
+    margin-left: 25px;
+    width: 55px;
+    height: 30px;
+    font-size: 13px;
+    padding-left: 5px;
+}
+
+.uf label{
+    margin-left: 25px;
+}
+
+.cidade input{
+    width: 255px;
+    height: 30px;
+    font-size: 13px;
+    padding-left: 5px;
+}
+
+.bairro input{
+    width: 255px;
+    height: 30px;
+    font-size: 13px;
+    padding-left: 5px;
+}
+
+.rua input{
+    width: 255px;
+    height: 30px;
+    font-size: 13px;
+    padding-left: 5px;
+}
+
+.numero_casa input{
+    width: 200px;
+    height: 30px;
+    font-size: 13px;
+    padding-left: 5px;
+}
+
+.cadastro_bg button{
+    margin-left: 50%;
+    margin-left: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    border: solid black 1px;
+    width: 90px;
+    padding: 1px;
+    margin-top: 40px;
+}
+
+.cadastro_bg button:hover{
+    color: blue;
+    border-color: blue;
+}
+
+.click_aqui{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.click_aqui span{
+    
+    font-weight: 600;
+}
+
+.click_aqui a{
+    font-weight: 700;
+    margin-left: 5px;
+    font-size: 15px;
+}
+
+/* Fim Cadastro */
+
+/* Inicio Respansivo */
+
+/*@media (max-width: 575.98px){
+    .login{
+        margin: 250px 0 0 370px;
+        height: 425px;
+        width: 50px;
+        border-radius: 20px;
+        border: solid mediumspringgreen 1px ;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px){
+    .login{
+        margin: 250px 0 0 370px;
+        height: 425px;
+        width: 50px;
+        border-radius: 20px;
+        border: solid indigo 1px ;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px){
+    .login{
+        margin: 250px 0 0 200px;
+        height: 425px;
+        width: 340px;
+        border-radius: 20px;
+        border: solid greenyellow 1px ;
+    }
+
+    .form_login button{
+        margin-left: 237px;
+    }
+
+    .cadastrar_se{
+        margin-left: 85px;
+    }
+}*/
+
+
+
+@media (max-width: 999px){
+    .bg_templates {
+        overflow-x: hidden;
+    }
+
+    .logo{
+        margin-left: 30px;
+        margin-top: 10px;
+        background-image: url("../icons/LOGO-Pequena.png");
+        background-repeat: no-repeat;
+        height: 60px;
+        width: 500px;
+    }
+
+    .nav-list{
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .mobile-menu {
+        margin-right: 15px;
+        display: block;
+    }
+
+    .nav-list.active {
+        transform: translateX(0);
+    }
+
+    /* Login */
+
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from {
+    opacity: 0;
+    transform: translateX(50px);
+    }
+    to {
+    opacity: 1;
+    transform: translateX(0);
+    }
+}
+
+/* Fim Respansivo */
