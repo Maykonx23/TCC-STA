@@ -159,6 +159,7 @@ div h1{
     font-weight: 700;
     color: black;
     margin-left: 3px;
+    margin-bottom: 8px;
     font-size: 15px;
 }
 
@@ -191,15 +192,15 @@ div h1{
     border-left: ridge #94D4D2 8px ;
     border-bottom: groove #94D4D2 8px ;
     border-right: groove #94D4D2 8px ;
-    margin-top: 200px;
+    margin-top: 115px;
     
     opacity: 0.9;
 }
 
 .cadastro{
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 .cadastro_bg td{

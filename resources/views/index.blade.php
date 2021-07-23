@@ -25,8 +25,8 @@
         <ul class="nav-list">
             <li><a href="">Início</a></li>
             <li><a href="index.php">Sobre</a></li>
-            <li><a href="cadastro.php">Cadastrar</a></li>
-            <li><a href="{{route('usuario.login')}}">Login</a></li>
+            <li><a href="{{route('cadastro')}}">Cadastrar</a></li>
+            <li><a href="{{route('login')}}">Login</a></li>
         </ul>
     </nav>
 

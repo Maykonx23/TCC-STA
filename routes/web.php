@@ -14,7 +14,17 @@ use App\Http\Controllers\UsuarioController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
+Route::get('/', HomeController::class)->name('Teste');
+*/
 Route::get('/', HomeController::class);
 
-Route::get('login', [ HomeController::class, 'login'])->name('usuario.login');
+Route::get('/login', [UsuarioController::class, 'login'])->name('login');
+
+Route::get('/cadastro', [UsuarioController::class, 'cadastro'])->name('cadastro');
+
+/*
+Route::get('/paineis/index', [\app\Http\Controllers\UsuarioController::class,  'logar'])->name('paineis.logar');
+
+
+
