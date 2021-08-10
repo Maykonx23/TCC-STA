@@ -39,3 +39,21 @@ const mobileNavbar = new MobileNavbar(
     ".nav-list li",
 );
 mobileNavbar.init();
+
+
+window.addEventListener('resize', function () {
+    if(window.screen.availWidth < 800){
+    $('#drop').toggleClass('dropleft');
+}else{
+    $('#drop').toggleClass('dropdown');
+}
+});
+
+// MASK
+
+$(document).ready(function(){
+    $("#cpf").mask("000.000.000-00");
+    $("#celular").mask("(00) 00000-0000");
+    $("#telefone").mask("(00) 0000-0000");
+    $("#cep").mask("00000-000");
+})

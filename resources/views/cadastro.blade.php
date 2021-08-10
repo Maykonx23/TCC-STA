@@ -1,121 +1,116 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="{{ URL::asset('assets/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('assets/css/style.css') }}" rel="stylesheet">
+@extends('layouts.templateLC')
+@section('title', 'CADASTRO')
+@section('content')
 
-    <title>CADASTRAR</title>
-</head>
-<body class="bg_cadastro">
-    <div class="container container2">
+<div class="container container2">
 
-        <div class="row cadastro_bg">
+    <div class="cadastro_bg">
 
-        
-            <div class="col-12">
-                <h1  class="cadastro">CADASTRO</h1>
-            </div>
-
-            <div class="col-12 dados">
-                <h4>Dados</h4>
-            </div>
-
-            <div class="col-3 nome">
-                <label for="name">Nome</label><br>
-                <input placeholder="Nome Completo"  type="text">
-            </div>
-
-            <div class="col-3 email">
-                <label for="name">EMAIL</label><br>
-                <input placeholder="Email" type="text">
-            </div>
-
-            <div class="col-3 celular">
-                <label for="name">CELULAR</label><br>
-                <input placeholder="Celular" type="text"> 
-            </div>
-            <div class="col-3 telefone">
-                <label for="name">TELEFONE</label><br>
-                <input placeholder="Telefone" type="text"> 
-            </div>
-
-            <div class="col-3 cpf">
-                <label for="name">CPF</label><br>
-                <input placeholder="CPF" type="text"> 
-            </div>
-
-            <div class="col-3 data_nasc">
-                <label for="name">DATA</label><br>
-                <input placeholder="Data de Nascimento" type="text"> 
-            </div>
-
-            <div class="col-3 senha">
-                <label for="name">SENHA</label><br>
-                <input placeholder="Data de Nascimento" type="text"> 
-            </div>
-
-            <div class="col-3 senha senha_conf">
-                <label for="name">CONFIRMAR SENHA</label><br>
-                <input placeholder="Data de Nascimento" type="text"> 
-            </div>
-            <!--Inicio Endereço-->
-            <div class="col-12 endereco">
-                <h4>Endereço</h4>
-            </div>
-
-            <div class="col-2 cep">
-                <label for="name">CEP</label><br>
-                <input placeholder="CEP" type="text"> 
-            </div>
-
-            <div class="col-1 uf">
-                <label for="name">UF</label><br>
-                <input placeholder="UF" type="text"> 
-            </div>
-
-            <div class="col-3 cidade">
-                <label for="name">CIDADE</label><br>
-                <input placeholder="Cidade" type="text"> 
-            </div>
-
-            <div class="col-3 bairro">
-                <label for="name">BAIRRO</label><br>
-                <input placeholder="Bairro" type="text"> 
-            </div>
-
-            <div class="col-3 rua">
-                <label for="name">RUA</label><br>
-                <input placeholder="Rua" type="text"> 
-            </div>
-
-            <div class="col-3 numero_casa">
-                <label for="name">Número</label><br>
-                <input placeholder="Número" type="text"> 
-            </div>
-
-            <!--Fim Endereço-->
-
-            <div class="col-12">
-            <button class="btn btn-outline" type="submit">SALVAR</button>
-            </div>
-
-            <hr class="linha2">
-
-            <div class="col-12 click_aqui">
-                <span>Já tem cadastro?</span>
-                <a href="index.php">Click Aqui</a>
-            </div>
-            
-
-
+        <div class="col-12">
+            <h1  class="cadastro">CADASTRO</h1>
         </div>
 
+        <div class="col-12 dados">
+            <h4>Dados</h4>
+        </div>
+
+        <form method="POST" class="form-cadastro row" action="{{route('usuarios.cadastros')}}">
+            @csrf
+
+                <div class="form-group col-3 nome">
+                    <label for="nome">Nome</label>
+                    <input name="nome" type="text" class="form-control" id="nome" placeholder="Nome Completo">
+                </div>
+
+                <div class="form-group col-3 email">
+                    <label for="email">Email</label>
+                    <input name="email" type="email" class="form-control" id="email" placeholder="Email" autocomplete="off">
+                </div>
+
+                <div class="form-group col-2 celular">
+                    <label for="celular">Celular</label>
+                    <input name="celular" type="celular" class="form-control" id="celular" placeholder="(00) 00000-0000">
+                </div>
+
+                <div class="form-group col-3 telefone">
+                    <label for="celular">Telefone</label>
+                    <input name="telefone" type="telefone" class="form-control" id="telefone" placeholder="(00) 0000-0000">
+                </div>
+
+                <div class="form-group col-3 cpf">
+                    <label for="cpf">CPF</label>
+                    <input name="cpf" type="text" class="form-control" id="cpf" placeholder="CPF">
+                </div>
+
+                <div class="form-group col-2 data_nasc">
+                    <label for="data_nasc">Data Nascimento</label>
+                    <input name="data_nasc" type="date" class="form-control" id="data_nasc">
+                </div>
+
+                <div class="form-group col-3 senha">
+                    <label for="senha">Senha</label>
+                    <input name="senha" type="password" class="form-control" id="senha" placeholder="Senha" autocomplete="off">
+                </div>
+
+                <div class="form-group col-3 senha_conf">
+                    <label for="senha_conf">Senha</label>
+                    <input type="password" class="form-control" id="senha_conf" placeholder="Confirmar Senha">
+                </div>
+
+                <!--Inicio Endereço-->
+                <div class="col-12 endereco">
+                    <h4>Endereço</h4>
+                </div>
+
+                <div class="form-group col-3 cep">
+                    <label for="cep">CEP</label>
+                    <input name="cep" type="text" class="form-control" id="cep" placeholder="CEP">
+                </div>
+
+                <div class="form-group col-1 uf">
+                    <label for="uf">UF</label><br>
+                    <select  name="uf" class="form-control" name="uf" id="uf">
+                        <option value=""></option>
+                        <option value="MS">MS</option>
+                        <option value="MT">MT</option>
+                    </select>
+                </div>
+
+                <div class="form-group col-4 cidade">
+                    <label for="cidade">Cidade</label>
+                    <input name="cidade" type="text" class="form-control" id="cidade" placeholder="Cidade">
+                </div>
+
+                <div class="form-group col-3 bairro">
+                    <label for="bairro">Bairro</label>
+                    <input name="bairro" type="text" class="form-control" id="bairro" placeholder="Bairro">
+                </div>
+
+                <div class="form-group col-3 rua">
+                    <label for="rua">Rua</label>
+                    <input name="rua" type="text" class="form-control" id="rua" placeholder="Rua">
+                </div>
+
+                <div class="form-group col-3 numero_casa">
+                    <label for="numero_casa">Numero</label>
+                    <input name="numero_casa" type="text" class="form-control" id="numero_casa" placeholder="Número">
+                </div>
+
+                <!-- Fim Cadastro Endereço -->
+
+                <button type="submit" class="btn btn-primary">Salvar</button>
+        </form>
+
+        <hr class="linha2">
+
+        <div class="col-12 click_aqui">
+            <span>Já tem cadastro?</span>
+            <a href="{{route('login')}}">Click Aqui</a>
+        </div>
 
     </div>
-</body>
-</html>
+
+
+</div>
+
+@endsection

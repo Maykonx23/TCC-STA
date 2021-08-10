@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\UsuariosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,17 +14,16 @@ use App\Http\Controllers\UsuarioController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-/*
-Route::get('/', HomeController::class)->name('Teste');
-*/
-Route::get('/', HomeController::class);
+/* Rotas Home */
+Route::get('/', HomeController::class)->name('index');
+Route::get('/login', [HomeController::class, 'login'])->name('login');
+Route::get('/cadastro', [HomeController::class, 'cadastro'])->name('cadastro');
 
-Route::get('/login', [UsuarioController::class, 'login'])->name('login');
+/* Rotas Usuarios */
+Route::post('usuario', [UsuariosController::class, 'login'])->name('usuarios.login');
+Route::post('cadastrar', [UsuariosController::class, 'cadastro'])->name('usuarios.cadastros');
 
-Route::get('/cadastro', [UsuarioController::class, 'cadastro'])->name('cadastro');
+Route::get('usuario/index', [UsuariosController::class, 'index'])->name('usuario.index');
 
-/*
-Route::get('/paineis/index', [\app\Http\Controllers\UsuarioController::class,  'logar'])->name('paineis.logar');
-
-
-
+/* Rotas Tecnicos */
+Route::get('tecnicos/index', [TecnicosController::class, 'index'])->name('tecnicos.index');

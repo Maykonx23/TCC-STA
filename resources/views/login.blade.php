@@ -1,60 +1,45 @@
+@extends('layouts.templateLC')
+@section('title', 'LOGIN')
+@section('content')
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<div class="container">
     
-    <link href="{{ URL::asset('assets/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
-    <link href="{{ url::asset('assets/css/style.css') }}" rel="stylesheet">
-    
-    <title>LOGIN</title>
-</head>
-<body class="bg_login">
+    <div class="login">
 
-    <div class="container">
-        <div class="row">
+        <h1>LOGIN</h1>
+        <form  id="login-form" class="form_login" action="{{route('usuarios.login')}}" method="POST">
+            @csrf
+            <div class="form-group row">
+                <div class="col-sm-10">
+                <img class="icones" src="{{ URL::asset('assets/icons/perfil-de-usuario.png') }}" alt="">
+                <label for="cpf" id="" class="col-sm-2col-form-label">CPF</label>
 
-                <div class="login">
-                
-                    <h1>LOGIN</h1>
-                    <div class="row form_login">
-                        
-                        <div class="col-12">
-                            <label for="cpf" id="cpf">CPF</label><br>
-                            <img class="icones" src="{{ URL::asset('assets/icons/perfil-de-usuario.png') }}" alt="">
-                            <input type="cpf" name="cpf" placeholder="Digite seu CPF">
-                        </div>
-
-                        <div class="col-12">
-                            <label for="senha" id="senha">SENHA</label><br>
-                            <img class="icones" src="{{ URL::asset('assets/icons/cadeado.png') }}" alt="">
-                            <input type="password" name="password" placeholder="Digite sua Senha"> 
-                        </div>
-
-                        <button class="btn btn-outline" type="submit">Entrar</button>
-
-                        <hr class="linha">
-
-                        <div class="col-12">
-                            <a class="esqueceu" href="#">Esqueceu a senha?</a>
-                            <a class="cadastrar_se" href="cadastro.php">Cadastrar-se</a>
-                        </div>
-
-                    </div>
-                
+                <input type="texte" name="cpf" class="form-control" id="cpf" placeholder="Digite seu CPF">
                 </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                <img class="icones" src="{{ URL::asset('assets/icons/cadeado.png') }}" alt="">
+                <label id="senha" for="password" class="col-sm-2 col-form-label">SENHA</label>
+                
+                <input type="password" name="senha" class="form-control" id="senha" placeholder="Digite sua Senha">
+            </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                <button type="submit" name="submit" class="btn btn-primary" value="Logar">Entrar</button>
+                </div>
+            </div>
+            
+            </form>
+            <hr class="linha">
 
-        </div>
-        
+            <div class="col-12">
+                <a class="esqueceu" href="#">Esqueceu a senha?</a>
+                <a class="cadastrar_se" href="{{route('cadastro')}}">Cadastrar-se</a>
+            </div>
     </div>
 
-    <!-- JavaScript -->
+</div>
+@endsection
 
-    <!-- Scripts DataTables -->
-    
-
-</body>
-</html>

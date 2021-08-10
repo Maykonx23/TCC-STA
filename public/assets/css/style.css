@@ -28,6 +28,10 @@ nav {
     opacity: 0.99;
 }
 
+#dropColor{
+    color: white
+}
+
 nav li{
     margin: 15px 0px 0px 30px;
     font-size: 20px;
@@ -40,13 +44,28 @@ nav li{
 }
 
 .nav-list a{
-    color: #fff;
+    color: white;
     text-decoration: none;
     transition: 0.3s;
 }
 
-.nav-list a:hover{
-    color: #E6D557;
+
+.nav-list .btn-group{
+    color: black;
+}
+
+#drop{
+    cursor: pointer;
+}
+
+.dropdown-menu a{
+    color: black;
+}
+
+.dropdown-menu a:hover{
+    color: white;
+    background-color: black;
+    opacity: 0.7;
 }
 
 .mobile-menu {
@@ -80,7 +99,7 @@ nav li{
 
 .login{
     background-color: #94D4D2;
-    margin: 250px 400px 0 400px;
+    margin: 150px 400px 0 400px;
     height: 425px;
     border-radius: 20px;
     border-top: ridge #94D4D2 8px ;
@@ -99,21 +118,21 @@ div h1{
 }
 
 .bg_login{
-    background: linear-gradient(-180deg, #070DFA, #234EFA 50%, #070DFA);
+    background: linear-gradient(-180deg, #FFF9F0, #FFFFFF 50%, #FFF9F0);
 }
 
 .login h1{
     text-align: center;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .form_login{
-    margin: 50px 0 0 0px;
+    margin: 20px 0 0 0px;
 }
 
 .form_login input{
-    width: 250px;
-    margin-right: 10px;
+    width: 245px;
+    margin-left: 25px;
 }
 
 .form_login button{
@@ -122,32 +141,35 @@ div h1{
     border: solid black 1px;
     width: 60px;
     padding: 1px;
-    margin-top: 35px;
-    margin-left: 235px;
+    margin-top: 15px;
+    margin-left: 200px;
 }
 
 .form_login button:hover{
+    background-color: white;
     color: blue;
 }
 
 #cpf{
     font-weight: bold;
-    margin-left: 30px;
-    margin-bottom: 12px;
+    padding-left: 2px;
+    margin-bottom: 5px;
 }
 
 #senha{
     font-weight: bold;
-    margin: 25px 0 12px 30px;
+    padding-left: 2px;
+    margin-bottom: 5px;
 }
 
 .icones{
     height: 25px;
-    margin-right: 4px;
+    margin-left: 25px;
+    margin-bottom: 10px;
 }
 
 .linha{
-    margin: 30px 0 10px 12px;
+    margin: 25px 0 10px 12px;
     width: 90%;
     background-color: black;
     text-align: center;
@@ -166,7 +188,7 @@ div h1{
 .cadastrar_se{
     font-weight: 700;
     color: black;
-    margin-left: 60px;
+    margin-left: 33px;
     font-size: 15px;
 }
 
@@ -179,11 +201,11 @@ div h1{
 }
 
 /* Fim Login */
-/* Inicio Cadastro */
+/* Inicio Cadastro 
 
 .bg_cadastro{
     background: linear-gradient(-180deg, #070DFA, #234EFA 50%, #070DFA);
-}
+}*/
 
 .cadastro_bg{
     background-color: #94D4D2;
@@ -192,9 +214,7 @@ div h1{
     border-left: ridge #94D4D2 8px ;
     border-bottom: groove #94D4D2 8px ;
     border-right: groove #94D4D2 8px ;
-    margin-top: 115px;
-    
-    opacity: 0.9;
+    margin-top: 40px;
 }
 
 .cadastro{
@@ -203,8 +223,16 @@ div h1{
     margin-bottom: 10px;
 }
 
+.dados{
+    margin-top: 35px;
+}
+
 .cadastro_bg td{
     display: inline;
+}
+
+.form-cadastro{
+    padding-left: 15px;
 }
 
 div label{
@@ -215,55 +243,66 @@ div label{
 
 .nome input{
     width: 270px;
-    height: 30px;
-    font-size: 13px;
+    height: 37px;
+    font-size: 15px;
     padding-left: 5px;
 }
 
 .email input{
     width: 270px;
-    height: 30px;
-    font-size: 13px;
+    height: 37px;
+    font-size: 15px;
     padding-left: 5px;
 }
 
 .celular input{
-    width: 270px;
-    height: 30px;
-    font-size: 13px;
-    padding-left: 5px;
+    width: 250px;
+    height: 37px;
+    font-size: 15px;
+    padding-left: 8px;
+}
+
+.telefone{
+    margin-left: 75px;
 }
 
 .telefone input{
-    width: 255px;
-    height: 30px;
-    font-size: 13px;
-    padding-left: 5px;
+    width: 250px;
+    height: 37px;
+    font-size: 15px;
+    padding-left: 8px;
 }
 
 .cpf input{
     width: 270px;
-    height: 30px;
-    font-size: 13px;
-    padding-left: 5px;
+    height: 37px;
+    font-size: 15px;
+    padding-left: 8px;
 }
 
 .data_nasc input{
-    width: 270px;
-    height: 30px;
-    font-size: 13px;
-    padding-left: 5px;
+    width: 240px;
+    height: 37px;
+    font-size: 15px;
+    padding-left: 8px;
+}
+
+.senha{
+    margin-left: 65px;
 }
 
 .senha input{
-    width: 270px;
-    height: 30px;
-    font-size: 13px;
-    padding-left: 5px;
+    width: 267px;
+    height: 37px;
+    font-size: 15px;
+    padding-left: 8px;
 }
 
 .senha_conf input{
-    width: 255px;
+    width: 262px;
+    height: 37px;
+    font-size: 15px;
+    padding-left: 8px;
 }
 
 .linha2{
@@ -275,73 +314,65 @@ div label{
     height: 1.1px;
 }
 
-.dados{
-    margin-top: 35px;
-}
-
 .endereco{
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .cep input{
-    width: 200px;
-    height: 30px;
-    font-size: 13px;
-    padding-left: 5px;
+    width: 270px;
+    height: 37px;
+    font-size: 15px;
+    padding-left: 8px;
 }
 
-.uf input{
-    margin-left: 25px;
-    width: 55px;
-    height: 30px;
-    font-size: 13px;
-    padding-left: 5px;
-}
-
-.uf label{
-    margin-left: 25px;
+.uf select{
+    width: 85px;
+    height: 37px;
+    font-size: 15px;
+    font-weight: 500;
+    padding-left: 8px;
 }
 
 .cidade input{
-    width: 255px;
-    height: 30px;
-    font-size: 13px;
-    padding-left: 5px;
+    width: 360px;
+    height: 37px;
+    font-size: 15px;
+    padding-left: 8px;
 }
 
 .bairro input{
-    width: 255px;
-    height: 30px;
-    font-size: 13px;
-    padding-left: 5px;
+    width: 325px;
+    height: 37px;
+    font-size: 15px;
+    padding-left: 8px;
 }
 
 .rua input{
-    width: 255px;
-    height: 30px;
-    font-size: 13px;
-    padding-left: 5px;
+    width: 270px;
+    height: 37px;
+    font-size: 15px;
+    padding-left: 8px;
 }
 
 .numero_casa input{
     width: 200px;
-    height: 30px;
-    font-size: 13px;
-    padding-left: 5px;
+    height: 37px;
+    font-size: 15px;
+    padding-left: 8px;
 }
 
-.cadastro_bg button{
-    margin-left: 50%;
-    margin-left: 50%;
+.form-cadastro button{
+    margin-left: 46%;
+    margin-right: 54%;
     font-size: 20px;
     font-weight: bold;
     border: solid black 1px;
-    width: 90px;
-    padding: 1px;
-    margin-top: 40px;
+    padding: 1px 5px 1px 5px;
+    margin-top: 20px;
 }
 
-.cadastro_bg button:hover{
+.form-cadastro button:hover{
+    background-color: white;
     color: blue;
     border-color: blue;
 }
@@ -429,7 +460,7 @@ div label{
         background: #23232e;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-evenly;
         transform: translateX(100%);
         transition: transform 0.3s ease-in;
     }
@@ -447,6 +478,8 @@ div label{
     .nav-list.active {
         transform: translateX(0);
     }
+
+    
 
     /* Login */
 
