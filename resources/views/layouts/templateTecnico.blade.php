@@ -1,3 +1,4 @@
+<?php @session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,7 +8,15 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="{{ URL::asset('assets/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
+
+    <script  type="text/javascript" src="{{ URL::asset('assets/javaScript/jquery-3.3.1.min.js') }}"></script>
+    
+    <script  type="text/javascript" src="{{ URL::asset('assets/bootstrap.min.js') }}"></script>
+
+    <script  type="text/javascript" src="{{ URL::asset('assets/javaScript/jquery.mask.min.js') }}"></script>
+    
+    <script type="text/javascript" src="{{ URL::asset('assets/javaScript/javaScript.js') }}"></script>
+
     <link href="{{ URL::asset('assets/css/style.css') }}" rel="stylesheet">
 
     <title>@yield('title')</title>
@@ -24,6 +33,7 @@
             <div class="line3"></div>
         </div>
         <ul class="nav-list">
+            <li><a href="{{route('tecnico.index')}}">Inicio</a></li>
             <li><a href="#">Pesquisa</a></li>
             <li>
                 <div class="dropdown" id="drop">
@@ -31,7 +41,7 @@
                         Cadastrar
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Serviços</a>
+                        <a class="dropdown-item" href="{{route('tecnicos.criarServico')}}">Serviços</a>
                     </div>
                 </div>
             </li>
@@ -39,10 +49,10 @@
             <li>
                 <div class="dropdown" id="drop">
                     <a class=" dropdown-toggle " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Perfil
+                        {{$_SESSION['nome_usuario']}}
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Sobre</a>
+                        <a class="dropdown-item" href="{{route('tecnicos.perfil')}}">Perfil</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Logout</a>
                     </div>
@@ -64,6 +74,7 @@
     <script src="{{ URL::asset('assets/datatables/jquery.dataTables.min.js')}}"></script>
     <script src="{{ URL::asset('assets/datatables/dataTables.bootstrap4.min.js')}}"></script>
     <script src="{{ URL::asset('assets/datatables/datatables-demo.js') }}"></script>
+
 
 </body>
 </html>

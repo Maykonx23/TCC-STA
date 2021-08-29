@@ -44,7 +44,7 @@
 
                 <div class="form-group col-2 data_nasc">
                     <label for="data_nasc">Data Nascimento</label>
-                    <input name="data_nasc" type="date" class="form-control" id="data_nasc">
+                    <input name="data_nasc" type="date" class="form-control" id="data_nasc data">
                 </div>
 
                 <div class="form-group col-3 senha">
@@ -69,7 +69,7 @@
 
                 <div class="form-group col-1 uf">
                     <label for="uf">UF</label><br>
-                    <select  name="uf" class="form-control" name="uf" id="uf">
+                    <select  name="uf" class="form-control" id="uf">
                         <option value=""></option>
                         <option value="MS">MS</option>
                         <option value="MT">MT</option>

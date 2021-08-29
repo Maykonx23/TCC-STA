@@ -1,3 +1,4 @@
+<?php @session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -13,6 +14,10 @@
     <title>@yield('title')</title>
 </head>
 <body class="bg_templates">
+    
+            
+    
+    
     <nav>
         
             <a href="{{route('index')}}"><div class="logo"> </div></a>
@@ -24,16 +29,17 @@
             <div class="line3"></div>
         </div>
         <ul class="nav-list">
+            <li><a href="{{route('usuario.index')}}">Inicio</a></li>
             <li><a href="#">Pesquisa</a></li>
-            <li><a href="#">Solicitação</a></li>
             <li><a href="#">Serviços</a></li>
             <li>
                 <div class="dropdown" id="drop">
                     <a class=" dropdown-toggle " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Perfil
+                        {{$_SESSION['nome_usuario']}}
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Sobre</a>
+                        <a class="dropdown-item" href="{{route('usuario.perfil')}}">Perfil</a>
+                        <a class="dropdown-item" href="#">Solicitação</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Logout</a>
                     </div>

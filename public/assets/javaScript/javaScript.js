@@ -56,4 +56,9 @@ $(document).ready(function(){
     $("#celular").mask("(00) 00000-0000");
     $("#telefone").mask("(00) 0000-0000");
     $("#cep").mask("00000-000");
+    $("#data").mask("00/00/0000");
+    $("#time").mask("00:00");
 })
+
+var datas = moment().format('DD-MMM-YYYY');
+$('#data').val(datas);

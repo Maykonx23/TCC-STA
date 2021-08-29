@@ -6,7 +6,7 @@
 /* Inicio Template */
 
 .bg_templates{
-    background-color: #D9EBE6;
+    background-color: #fff;
 }
 
 .logo {
@@ -108,7 +108,7 @@ nav li{
     border-right: groove #94D4D2 8px ;
 }
 /*
-.container2{
+.container3{
     height: 100vh;
     border: solid blue 1px;
 }*/
@@ -394,6 +394,61 @@ div label{
 }
 
 /* Fim Cadastro */
+
+/* Pagina Perfil */
+
+.container3{
+    border: solid red 1px;
+}
+
+.form-perfil{
+    background-color: white;
+    margin: 30px 15px 30px 15px;
+    padding: 15px 10px 10px 10px;
+    border-radius: 10px;
+    border-top: ridge #fff 5px ;
+    border-left: ridge #fff 5px ;
+    border-bottom: groove #fff 5px ;
+    border-right: groove #fff 5px ;
+    /*margin: top ritgh bottun lefth;*/
+}
+
+.form-perfil input{
+    border-color: dimgrey;
+    pointer-events: none;
+    color: black;
+}
+
+.form-perfil textarea{
+    border-color: dimgrey;
+    pointer-events: none;
+    color: black;
+}
+
+/* Fim Pagina Perfil */
+/* Pagina Ciar Inicio */
+.form-criar{
+    background-color: white;
+    margin: 30px 15px 30px 15px;
+    padding: 15px 10px 10px 10px;
+    border-radius: 10px;
+    border-top: ridge #fff 5px ;
+    border-left: ridge #fff 5px ;
+    border-bottom: groove #fff 5px ;
+    border-right: groove #fff 5px ;
+}
+
+.form-criar input, textarea{
+    border-color: dimgrey;
+    color: black;
+}
+
+.form-criar select{
+    border-color: dimgrey;
+    color: black;
+}
+
+/* Pagina Criar final */
 
 /* Inicio Respansivo */
 

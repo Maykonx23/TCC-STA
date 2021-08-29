@@ -15,7 +15,7 @@ class CreateFiltrosTable extends Migration
     {
         Schema::create('filtros', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('titulo', 20);
+            $table->string('titulo', 20)->nullable();
             $table->timestamps();
         });
     }

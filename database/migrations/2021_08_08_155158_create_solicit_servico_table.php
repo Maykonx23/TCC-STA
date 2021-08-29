@@ -19,13 +19,12 @@ class CreateSolicitServicoTable extends Migration
             $table->string('validacao', 20);
             $table->string('status', 20);
             $table->unsignedBigInteger('usuario_id');
-            $table->unsignedBigInteger('tecnico_id');
-            $table->float('avaliação');
+            $table->float('avaliacaoT')->nullable();
+            $table->float('avaliacaoU')->nullable();
             $table->unsignedBigInteger('servico_id');
             $table->timestamps();
 
             $table->foreign('usuario_id')->references('id')->on('usuarios');
-            $table->foreign('tecnico_id')->references('id')->on('tecnicos');
             $table->foreign('servico_id')->references('id')->on('servicos');
         });
     }

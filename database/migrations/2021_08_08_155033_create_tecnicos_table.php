@@ -15,7 +15,7 @@ class CreateTecnicosTable extends Migration
     {
         Schema::create('tecnicos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('descrição', 600);
+            $table->text('descricao', 600);
             $table->unsignedBigInteger('usuario_id');
             $table->timestamps();
 

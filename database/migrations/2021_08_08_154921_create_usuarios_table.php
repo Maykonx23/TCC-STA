@@ -23,12 +23,10 @@ class CreateUsuariosTable extends Migration
             $table->string('celular', 15);
             $table->string('telefone', 14)->nullable();
             $table->unsignedBigInteger('endereco_id');
-            $table->unsignedBigInteger('filtro_id')->nullable();
             $table->string('nivel', 20);
             $table->timestamps();
 
             $table->foreign('endereco_id')->references('id')->on('enderecos');
-            $table->foreign('filtro_id')->references('id')->on('filtros');
         });
     }
 

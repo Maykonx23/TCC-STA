@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TecnicoController;
 use App\Http\Controllers\UsuariosController;
 
 /*
@@ -21,9 +22,21 @@ Route::get('/cadastro', [HomeController::class, 'cadastro'])->name('cadastro');
 
 /* Rotas Usuarios */
 Route::post('usuario', [UsuariosController::class, 'login'])->name('usuarios.login');
+
 Route::post('cadastrar', [UsuariosController::class, 'cadastro'])->name('usuarios.cadastros');
 
-Route::get('usuario/index', [UsuariosController::class, 'index'])->name('usuario.index');
+Route::get('usuario', [UsuariosController::class, 'index'])->name('usuario.index');
+
+Route::get('usuario/perfil', [UsuariosController::class, 'perfil'])->name('usuario.perfil');
+
+Route::get('usuario/perfil/edit', [UsuariosController::class, 'editarPerfil'])->name('usuario.editarPerfil');
+
 
 /* Rotas Tecnicos */
-Route::get('tecnicos/index', [TecnicosController::class, 'index'])->name('tecnicos.index');
+Route::get('tecnico/index', [TecnicoController::class, 'index'])->name('tecnicos.index');
+
+Route::get('tecnico/criar/servico', [TecnicoController::class, 'criarServico'])->name('tecnicos.criarServico');
+
+Route::get('tecnico/perfil', [TecnicoController::class, 'perfil'])->name('tecnicos.perfil');
+
+Route::get('tecnico/index', [TecnicoController::class, 'index'])->name('tecnico.index');
